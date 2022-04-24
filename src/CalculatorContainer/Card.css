@@ -1,0 +1,224 @@
+.calculator {
+    /* background-color: var(--white); */
+    background-color: var(--light-grayish-cyan-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 1.4rem 1.4rem 0 0;
+}
+
+label {
+    color: var(--dark-grayish-cyan-1);
+    font-size: 15px;
+    font-family: var(--fontFamily);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+/* Bill Section */
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bill-input {
+    background-image: url("./images/icon-dollar.svg");
+    margin-bottom: 36px;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    padding-right: 18px;
+    background-position: 17px 14px;
+    background-repeat: no-repeat;
+    background-color: var(--light-grayish-cyan-1);
+    text-align: right;
+    font-size: 24px;
+    color: var(--very-dark-cyan);
+    font-weight: bolder;
+    font-family: var(--fontFamily);
+}
+
+/* Select Tip Section */
+.tip {
+    margin-top: 0.4rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 144px 144px;
+    row-gap: 1em;
+    column-gap: 18px;
+    margin-bottom: 1.4rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: var(--very-dark-cyan);
+    cursor: pointer;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    height: 48px;
+    font-size: 24px;
+    border-radius: 4px;
+}
+
+button span{
+
+}
+
+
+.tip-custom {
+    width: 100%;
+    color: var(--very-dark-cyan);
+}
+
+.tip-option:hover {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    font-weight: bolder;
+}
+
+/* Number of People Section */
+.peopleSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.people-input {
+    background-image: url("./images/icon-person.svg");
+    margin-bottom: 36px;
+}
+
+
+
+/* Calculation result Section */
+.outputSection {
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 60%;
+    border-radius: 0.5rem;
+    padding: 39px 21px;
+    /* text-align: left; */
+}
+
+.tip-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+    margin-bottom: 1.7rem;
+}
+
+.total-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+    margin-bottom: 1.7rem;
+}
+
+.divided-person {
+    font-weight: bold;
+    font-size: 12px;
+    color: var(--dark-grayish-cyan-2);
+}
+
+.amount {
+    font-weight: bold;
+    font-size: 28px;
+    color: var(--strong-cyan);
+}
+
+/* Reset btn Section */
+.resetSection {
+    cursor: pointer;
+    background-color: var(--strong-cyan);
+    cursor: pointer;
+    text-align: center;
+    color: var(--very-dark-cyan);
+    padding: 9px 0 9px 0;
+    border-radius: 0.3rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+/* For Mobile Height but for now we are testing for desktop*/
+
+@media only screen and (min-width: 1000px) {
+    .calculator {
+        width: 990px;
+        flex-direction: row;
+        border-radius: 1.4;
+        padding: 2.3rem;
+        margin-top: 3rem;
+        height: 479px;
+    }
+
+    input {
+        width: 415px;
+        padding: 9px;
+        background-position: 17px 18px;
+    }
+
+    .inputSection {
+        margin-top: 1rem;
+        margin-left: 1.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bill-input {
+        margin-bottom: 3.4rem;
+    }
+
+    .tip {
+        grid-template-columns: 135px 135px 135px;
+        row-gap: 1em;
+        column-gap: 17px;
+        margin-bottom: 3.2rem;
+        justify-content:left;
+
+    }
+
+    .tip-option {
+        height: 50px;
+    }
+
+    .outputSection {
+        margin-left: auto;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        padding: 48px 38px;
+    }
+
+    .amount {
+        font-size: 30px;
+    }
+
+    .reset {
+        padding: 13px 0 13px 0;
+        margin-top: auto;
+    }
+
+
+}
